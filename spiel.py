@@ -115,16 +115,19 @@ class monster:
 
     def update_monster(self, pos_monster):
         if pos_monster == 1:
-            self.v = self.v + ((randint(-8, 1)) * self.speed_monster)
-            self.c = self.c + ((randint(-5, 5)) * self.speed_monster)
+
             if self.v >= 660:
                 self.v = self.v + ((randint(-2, 0)) * self.speed_monster)
             elif self.v <= 140:
-                self.v = self.v + ((randint(0, 2)) * self.speed_monster)
+                self.v = self.v + ((randint(0, 8)) * self.speed_monster)
             if self.c <= 140:
                 self.c = self.c + ((randint(0, 2)) * self.speed_monster)
-            elif self.c >= 460:
-                self.c = self.c + ((randint(-2, 0)) * self.speed_monster)
+            elif self.c >= 450:
+                self.c = self.c + ((randint(-9, 0)) * self.speed_monster)
+            else:
+                self.v = self.v + ((randint(-8, 3)) * self.speed_monster)
+                self.c = self.c + ((randint(-5, 5)) * self.speed_monster)    
+
 
         screen.blit(self.img_monster, (self.v, self.c))
         self.rvm_v = int(self.v)
