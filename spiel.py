@@ -14,7 +14,7 @@ from PySide.QtCore import *
 
 username = getpass.getuser()
 im=ImageGrab.grab()
-background="/Users/" + username + "/Desktop/failure/screenshot199.png"
+background="/Users/" + username + "/Desktop/screenshot199.png"
 im.save(background)
 
 
