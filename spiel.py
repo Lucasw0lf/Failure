@@ -101,7 +101,7 @@ class player(pygame.sprite.Sprite):
             font = pygame.font.Font(None, 32)
             bg = pygame.display.set_mode((800, 600), 0, 24)
             bg.fill((0,0,0))
-            bg.blit(font.render("WELL DONE!!", 1, (255, 255, 255)), (200, 200))
+            bg.blit(font.render("WELL DONE!!\n...But is that what you wanted??", 1, (255, 255, 255)), (200, 200))
         else:
             None
 
@@ -126,7 +126,7 @@ class monster:
                 self.c = self.c + ((randint(-9, 0)) * self.speed_monster)
             else:
                 self.v = self.v + ((randint(-8, 3)) * self.speed_monster)
-                self.c = self.c + ((randint(-5, 5)) * self.speed_monster)    
+                self.c = self.c + ((randint(-5, 5)) * self.speed_monster)
 
 
         screen.blit(self.img_monster, (self.v, self.c))
