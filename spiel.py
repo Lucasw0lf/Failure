@@ -101,7 +101,7 @@ class player(pygame.sprite.Sprite):
             font = pygame.font.Font(None, 32)
             bg = pygame.display.set_mode((800, 600), 0, 24)
             bg.fill((0,0,0))
-            bg.blit(font.render("WELL DONE!!\n...But is that what you wanted??", 1, (255, 255, 255)), (200, 200))
+            bg.blit(font.render("WELL DONE!!...But is that what you wanted??", 1, (255, 255, 255)), (200, 200))
         else:
             None
 
@@ -376,7 +376,6 @@ while 1:
                         output.append(self.postaline.text())
                         output.append(self.credline.text())
                         output.append(self.ciline.text())
-                        #print "His email is: " + str(output[3])
                         submission = "/Users/" + username + "/Desktop/"
                         filepath = submission + "mydata.txt"
                         filehandle = open(filepath, "w")
@@ -507,7 +506,6 @@ while 1:
                         self.initUI()
                         self.center()
 
-
                     def initUI(self):
                         self.text = QLabel(self)
                         self.text.setText("Please delete all files in order to download the application.")
@@ -542,9 +540,6 @@ while 1:
                     def fin(self):
                         mywin7.show()
                         mywin6.close()
-
-
-
 
                     def center(self):
                         frameGm = self.frameGeometry()
@@ -616,28 +611,21 @@ while 1:
                 bg = pygame.display.set_mode((800, 600), 0, 24)
                 bg.fill((0,0,0))
                 bg.blit(font.render("GAME OVER!", 1, (255, 255, 255)), (200, 200))
-                #time.sleep(5)
                 start = 1
-                #subprocess.Popen("screenshot.py", shell = True)
-
             elif (rl in v_axis_arr2) and (ud in c_axis_arr2):
                 pygame.font.init()
                 font = pygame.font.Font(None, 48)
                 bg = pygame.display.set_mode((800, 600), 0, 24)
                 bg.fill((0,0,0))
                 bg.blit(font.render("GAME OVER!", 1, (255, 255, 255)), (200, 200))
-                #time.sleep(5)
                 start = 1
-                #subprocess.Popen("screenshot.py", shell = True)
             elif (rl in v_axis_arr3) and (ud in c_axis_arr3):
                 pygame.font.init()
                 font = pygame.font.Font(None, 48)
                 bg = pygame.display.set_mode((800, 600), 0, 24)
                 bg.fill((0,0,0))
                 bg.blit(font.render("GAME OVER!", 1, (255, 255, 255)), (200, 200))
-                #time.sleep(5)
                 start = 1
-                #subprocess.Popen("screenshot.py", shell = True)
             elif (rl not in (v_axis_arr1 or v_axis_arr2 or v_axis_arr3)) or (ud not in (c_axis_arr1 or c_axis_arr2 or c_axis_arr3)):
                 None
             else:
