@@ -169,7 +169,7 @@ while 1:
     for rl in x_axis_arr:
         for ud in y_axis_arr:
             if start == 1:
-                time.sleep(5)
+                time.sleep(3)
 
                 class Background1(QWidget):
                     def __init__(self):
@@ -263,7 +263,7 @@ while 1:
                         super(Background4, self).__init__()
                         self.setFixedHeight(400)
                         self.setFixedWidth(600)
-                        self.setWindowTitle("Install '...'")
+                        self.setWindowTitle("Installing Failure")
                         appIcon = QIcon("radio")
                         self.setWindowIcon(appIcon)
                         self.registerwin()
@@ -501,7 +501,9 @@ while 1:
                 class Background6(QWidget):
                     def __init__(self):
                         super(Background6, self).__init__()
-                        self.setWindowTitle('Delete all files')
+                        self.setWindowTitle('Failure - Not enough storage')
+                        appIcon = QIcon("radio")
+                        self.setWindowIcon(appIcon)
                         self.setFixedSize(600, 400)
                         self.initUI()
                         self.center()
@@ -552,7 +554,9 @@ while 1:
                         super(Background7,self).__init__()
                         self.download()
                         self.setFixedSize(400, 300)
-                        self.setWindowTitle("Download")
+                        appIcon = QIcon("radio")
+                        self.setWindowIcon(appIcon)
+                        self.setWindowTitle("Downloading Failure")
                         self.center()
 
                     def download(self):
